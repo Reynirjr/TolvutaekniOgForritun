@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1732209239.06907 "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" "TogFLokaprof.pdf" "TogFLokaprof" 1732209245.96053 0
-  "TogFLokaprof.aux" 1732209244 3621 542b90d34e83b31da4f4a91fa6aa3d90 "pdflatex"
-  "TogFLokaprof.out" 1732209244 3376 8a8161a88409835775e63315f5b596cb "pdflatex"
-  "TogFLokaprof.tex" 1732209222 11723 44cde7521d23147c61cf999f855babc3 ""
-  "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" 1732209222 11723 44cde7521d23147c61cf999f855babc3 ""
+["pdflatex"] 1732224287.09266 "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" "TogFLokaprof.pdf" "TogFLokaprof" 1732224295.49342 0
+  "TogFLokaprof.aux" 1732224294 3708 78af068940e16ae6e0b867a2029b09d3 "pdflatex"
+  "TogFLokaprof.out" 1732224294 3438 800abca42d62f582823ebe5277c48382 "pdflatex"
+  "TogFLokaprof.tex" 1732224274 12500 164c2bb9d10a8ca80e51621ca328faed ""
+  "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" 1732224274 12500 164c2bb9d10a8ca80e51621ca328faed ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1731962365 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1731960895 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731963639 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -234,11 +234,11 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732027764 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732028973 3342994 354f48bd93d60157c1b50486eb827cd4 ""
   "c:/texlive/2024/texmf.cnf" 1732027718 713 e69b156964470283e0530f5060668171 ""
-  "gistabrot.excalidraw.png" 1731932119 115027 0ddf1fcb38495a7c7a9671692266cae4 ""
-  "minni.excalidraw.png" 1731937707 286585 7fd755bb7c6645f7d0b7136692723a70 ""
-  "skipting.excalidraw.png" 1731938341 175523 5235051957ac6e9ba26ff167082eef03 ""
-  "study.png" 1732120177 1530099 0d08dbc5adb505f51e7688cf3cad8b3b ""
-  "syndarminni.excalidraw.png" 1731938129 103791 73d56f2d025adcc0665e926fa535b7e1 ""
+  "myndir/gistabrot.excalidraw.png" 1731932119 115027 0ddf1fcb38495a7c7a9671692266cae4 ""
+  "myndir/minni.excalidraw.png" 1731937707 286585 7fd755bb7c6645f7d0b7136692723a70 ""
+  "myndir/skipting.excalidraw.png" 1731938341 175523 5235051957ac6e9ba26ff167082eef03 ""
+  "myndir/study.png" 1732120177 1530099 0d08dbc5adb505f51e7688cf3cad8b3b ""
+  "myndir/syndarminni.excalidraw.png" 1731938129 103791 73d56f2d025adcc0665e926fa535b7e1 ""
   (generated)
   "TogFLokaprof.aux"
   "TogFLokaprof.log"
