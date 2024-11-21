@@ -3,3 +3,6 @@ settings.json
 TogFLokaprof.aux
 TogFLokaprof.log
 TogFLokaprof.out
+TogFlokaprof.fls
+TogFlokaprof.fdb_latexmk
+.gitignore

@@ -243,7 +243,7 @@ dæmi:
 
 
 \newpage
-\section{Próf 2022}
+\section{Próf 2022 og mínar lausnir við því}
 \subsection{1}
 Í þessu dæmi ætlum við að nota unsigned long breytur til að tákna (allt að) 64
 staka mengi (sets). Ef a er unsigned long breyta þá er stak i í menginu a ef biti i
@@ -303,6 +303,107 @@ gildið á i sé á bilinu 0 til 63. Haus fallsins:
 Við höfum 10-bita fleytitölur sem fylgja IEEE staðlinum. Við vitum ekki
 skiptingu þeirra í veldishluta (exp) og brothluta (frac), en það er einn formerkisbiti
 fremst í þeim.
+
+\subsubsection{a.}Hver er lágmarks bitafjöldi í brothluta fleytitölunnar til að hægt sé að tákna
+töluna $3 \frac{9}{16}(=3.5625)$ nákvæmlega á þessu formi? Rökstyðjið svar ykkar með útreikningi.
+
+\textbf{Svar}:
+alright við vitum að í IEEE staðlinum erum við með fyrstu töluna sem segir til um + eða mínus næst kemur veldishlutinn og svo brothlutinn.
+
+breytum 3.5625 í binary
+
+\begin{align*}
+    3.5625 &= 11.1001 \\
+\end{align*}
+
+setjum nú töluna í normað form ($1.f \times 2^n$) 
+færum kommuna um einn stað til vinstri $1.11001 \times 2^1$ 
+Veldisvísirinn er þá 1 og brothlutinn er 11001
+
+svo Lágmarksbitafjöldi í brothlutanum er því 5 bitar
+
+
+\subsubsection{b.}Hvert er bitagildið fyrir töluna $3 \frac{9}{16}(=3.5625)$ miðað við bitafjöldann fyrir brothlutann sem
+þið funduð í a-lið (ef þið náðuð ekki að leysa a-liðinn megið þið gefa ykkur
+raunhæft gildi bitafjöldanum fyrir brothlutann)? Sýnið útreikning á bitagildinu.
+
+
+\textbf{Svar}:
+
+þar sem við erum að vinna með 10 bita fleytitölur og við höfum að brothlutinn er 5 bitar
+þá er veldishlutinn 4 bitar og formerkisbitinn er 1 biti
+
+\begin{enumerate}
+    \item Reiknum bias (skekkjustuðulinn)
+    \[Bias = 2^{4-1} - 1 = 7\]
+    \item Geymdur veldisvísir er þá
+    \[GeymtE = E + Bias = 1 + 7 = 8\]
+    8 í tvíundarkerfi er 1000
+    \item setjum saman bitana:
+    \begin{itemize}
+        \item Formeki: 0 (jákvæð tala)
+        \item Veldishlutinn: 1000
+        \item Brothlutinn: 11001
+    \end{itemize}
+
+    \textbf{heildarbitaröðin og bitagildið er þá: 0 1000 11001}
+\end{enumerate}
+
+
+
+\subsubsection{c.} Segjum að í þessum 10-bita fleytitölum hefur verið ákveðið að nota einn bita
+fyrir formerki, einn bita fyrir brothluta og restina af bitunum fyrir veldishlutann.
+Er hægt að tákna staðlaðar tölur á þessu formi, og ef svo er, hver er þá \underline{stærsta
+staðlaða talan} sem hægt er að tákna? Rökstyðjið svar ykkar.
+
+\textbf{Svar}:
+Já við getum táknað staðlaðar tölur á þessu formi 
+
+\begin{itemize}
+    \item Formerki: 1 biti
+    \item Veldishlutinn: 8 bitar
+    \item Brothlutinn: 1 biti
+\end{itemize}
+
+
+Reiknum Bias
+
+\[2^{k-1} - 1= 2^{8-1} = 2^7 - 1 = 127\]
+
+Hámarks veldistalan er þá $2^{8-1} - 1 = 127$
+
+brothlutinn er 1 og við höfum gefinn 1 bita svo marktalan er 1.1 í binary sem í decimal er 1.5
+
+stærsta staðlaða talan er því
+
+\[1.5 \times 2^{127}\]
+
+\subsubsection{d.} Nú hefur verið ákveðið að nota einn bita fyrir formerki, einn bita fyrir
+veldishluta og restina af bitunum fyrir brothlutann. Er hægt að tákna staðlaðar
+tölur á þessu formi, og ef svo er, hver er nú \underline{stærsta staðlaða talan} sem hægt er
+að tákna? Rökstyðjið svar ykkar.
+
+\textbf{Svar}:
+Alright reynum þetta þá erum við með 
+
+\begin{itemize}
+    \item Formerki: 1 biti
+    \item Veldishlutinn: 1 biti
+    \item Brothlutinn: 8 bitar
+\end{itemize}
+
+reiknum bias
+
+\[2^{k-1} - 1 = 2^{1-1} - 1 = 0\]
+
+\textbf{Mögulegir veldisvísar eru þá: 0, 1}
+\[E = 1 - 0 = 1\]
+
+\textbf{Stærsta talan sem hægt er að tákna er þá:}
+\[1.11111111_2 \times 2^1  = 1.(2^{1/2^1}+1/2^2+1/2^3+1/2^{\cdots}+2^8)=1.9960375 \times 2^1\]
+
+\textbf{Stærsta staðlaða talan:}
+\[1.9960375 \times 2^1 = 3.9921875\]
 
 \newpage
 
