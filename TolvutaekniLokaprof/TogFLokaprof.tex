@@ -430,11 +430,40 @@ Rökstyðjið svarið með vísun í kóðann.
 
 \textbf{Svar}:
 
+Við höfum þrjár inntaksbreytur og eina staðværa breytu
+
+\begin{itemize}
+    \item \textbf{\%rdi} við sjáum að hér er \textbf{movq (rdi), rax} sem bendir til að þetta sé pointer á unsigned long gildi og fyrsta inntaksbreytan
+    \item \textbf{\%rsi} Notað í samanburði \textbf{cmpq rdx, rsi} og síðan uppfærð með \textbf{addq \text{\$1}, rsi} þetta er önnur inntaksbreytan, líklega heiltala.
+    \item \textbf{\%rdx} Notað í samanburði \textbf{cmpq rdx, rsi} þetta er þriðja inntaksbreytan og sennilega líka heiltala
+    \item \textbf{\%rax} Notað til að geyma gildi sem er lesið úr mminni og síðan uppfært í lykkju.
+\end{itemize}
+
+því erum við með 4 vistföng
+
+\begin{enumerate}
+    \item \textbf{Bendir}: unsigned long * (í \text{\%rdi})
+    \item \textbf{Heiltala s}: unsigned long (í \text{\%rsi})
+    \item \textbf{Heiltala x}: unsigned long (í \text{\%rdx})
+    \item \textbf{Staðvær heiltala rax}: unsigned long (í \text{\%rax})
+\end{enumerate}
+
 
 \subsubsection{b.}Skrifið jafngildan C kóða fyrir fallið \textbf{fun}. Þið megið velja breytunöfnin, eða
 nefna þau eftir gistunum.
 
 \textbf{Svar}:
+
+\begin{lstlisting}
+   unsigned long fun(unsigned long *ptr, unsigned long s, unsigned long x){
+        unsigned long rax = *ptr;
+        while(s < x){
+            rax = 6 * rax;
+            s = s + 1;
+        }
+        return rax;
+    }
+\end{lstlisting}
 
 
 \subsubsection{c.} Smalamálskóðinn að ofan er úttak úr þýðandanum \textbf{gcc} með bestunarrofann
