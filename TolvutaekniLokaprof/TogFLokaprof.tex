@@ -243,6 +243,34 @@ dæmi:
 
 
 \newpage
+\section{Próf 2022}
+\subsection{1}
+Í þessu dæmi ætlum við að nota unsigned long breytur til að tákna (allt að) 64
+staka mengi (sets). Ef a er unsigned long breyta þá er stak i í menginu a ef biti i
+($i = 0, \ldots 63$) er 1, annars er stak i ekki í menginu. Til dæmis væri mengið $\{0, 3\}$,
+táknað með 64-bita bitastrengnum 00...01001. Athugið að bitarnir eru númeraðir frá
+hægri til vinstri, svo stak 0 er í menginu, en stak 1 er ekki í menginu, stak 2 er ekki í
+menginu, o.s.frv.
+
+\subsubsection{a.}  Skrifið einnar línu fall (þ.e. bara ein \textbf{return} skipun) sem skilar sammengi
+(union) tveggja slíkra mengja. Haus fallsins:
+\textbf{unsigned long sammengi(unsigned long a, unsigned long b)}
+
+\subsubsection{b.}  Skrifið einnar línu fall sem skilar mengjamun (set difference) mengjanna a og b,
+þ.e. öll stök sem eru í a, en ekki í b. Haus fallsins:
+\textbf{unsigned long munur(unsigned long a, unsigned long b)}
+
+\subsubsection{c.}  Athugið að í C er fastinn \textbf{1ul} (tölustafurinn \textbf{1} og bókstafirnir u og l) 64-bita
+heiltalan 1 án formerkis. Hvaða mengi táknar segðin \textbf{($1ul << i$)}?
+
+\subsubsection{d.}Skrifið einnar línu fall sem skilar því hvort stak i sé í menginu a. Skilagildið á
+að vera 1 (\textit{satt}) ef i er í a, en 0 (\textit{ósatt}) annars. Þið megið gera ráð fyrir því að
+gildið á i sé á bilinu 0 til 63. Haus fallsins:
+\textbf{int stakI(unsigned long a, int i)}
+
+
+\newpage
+
 \section{Vika 1}
 \large{\textbf{Kynning, Linux, C}}
 
