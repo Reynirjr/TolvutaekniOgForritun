@@ -406,7 +406,69 @@ reiknum bias
 \[1.9960375 \times 2^1 = 3.9921875\]
 
 \newpage
+\subsection{3}
+Hér fyrir neðan er smalamálskóði fallsins fun:
 
+\begin{verbatim}
+    fun:
+        movq    (%rdi), %rax
+        jmp     .L2
+    .L3:
+        leaq    (%rax,%rax,2), %rax
+        addq    %rax, %rax
+        addq    $1, %rsi
+    .L2:
+        cmpq    %rdx, %rsi
+        jl      .L3
+        ret
+\end{verbatim}
+
+
+\subsubsection{a.} Hver er fjöldi vistfanga fallsins \textbf{fun} og hvert er tag hvers þeirra? Þið eigið að geta séð það út frá notkun gista í kóðanum hér að ofan. 
+Rökstyðjið svarið með vísun í kóðann.
+
+
+\textbf{Svar}:
+
+
+\subsubsection{b.}Skrifið jafngildan C kóða fyrir fallið \textbf{fun}. Þið megið velja breytunöfnin, eða
+nefna þau eftir gistunum.
+
+\textbf{Svar}:
+
+
+\subsubsection{c.} Smalamálskóðinn að ofan er úttak úr þýðandanum \textbf{gcc} með bestunarrofann
+\textbf{-Og}. Ef notaður er bestunarrofinn \textbf{-O3} (sem er mesta mögulega bestun) fæst
+kóðinn sem hér er fyrir neðan. Berið hann sama við fyrri kóðann og segið í
+hvaða tilvikum \textbf{O3}-kóðinn gæti verið hraðvirkari.
+
+\begin{verbatim}
+    fun:
+        movq    (%rdi), %rax
+        cmpq    %rdx, %rsi
+        jge     .L1
+    .L3:
+        leaq    (%rax,%rax,2), %rax
+        addq    %rax, %rax
+        addq    $1, %rsi
+        cmpq    %rsi, %rdx
+        jne     .L3
+    .L1:
+        ret
+
+\end{verbatim}
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 \section{Vika 1}
 \large{\textbf{Kynning, Linux, C}}
 
