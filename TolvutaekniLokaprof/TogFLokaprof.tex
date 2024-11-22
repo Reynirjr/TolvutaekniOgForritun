@@ -566,10 +566,28 @@ Byrjum á að skoða kóðann:
 alright reynum að átta okkur á breytunum
 
 \begin{itemize}
-    \item something
+    \item edi: við höfum cmp(l) l tekur 32 bita sem þýðir að þetta er líklega heiltala 
+    \item esi: við höfum cmp(l) sem þýðir að þetta er líklega heiltala
+    \item eax: við höfum mov(l) skipun sem þýðir að þetta er líklega heiltala
+    \item rsp: við höfum sub(q) q tekur 64 bita sem þýðir að þetta er líklega minnisvísir
 \end{itemize}
 
+\begin{lstlisting}
+    int rec(int n, int m){
+        if(n >= m){
+            m = m + m;
+            n = n - 2;
+            int result = rec(n, m);
+            return result + 1;
+        }
+        else{
+            return 0;
+        }
+    }
+\end{lstlisting}
 
+\subsubsection{b.}eiknið upp hlaðaramma (stack frame) \underline{fallsins \textbf{rec}} og merkið inn einstök
+svæði í honum.
 
 
 
