@@ -124,6 +124,8 @@
     \item \%ax: 16 bita register
     \item \%al: 8 bita register
     \item \textbf{Diane's Silk Dress Costs 89} (rdi, rsi, rdx, rcx, r8, r9)
+    \item Formúla fyrir vistfang:
+    \[\text{Vistfang} a[i][j] = \text{Upphafsvistfang} + ( i \times \text{fjöldi dalka} + j) \times \text{stærð staks}\]
 \end{itemize}
 
 
@@ -590,6 +592,32 @@ alright reynum að átta okkur á breytunum
 svæði í honum.
 
 \textbf{Svar}:
+
+reyni við seinna skil ekki alveg
+
+
+\newpage
+
+\subsection{5} Þrjár sjálfstæðar spurningar
+
+\subsubsection{a.} Gefið er fylkið \textbf{short int a[6][10]}. Ef upphafsvistfang þess er 0, hvert
+er þá vistfang staksins \textbf{a[3][4]}? Sýnið útreikning.
+
+\textbf{Svar}:
+
+notum víst þessa formúlu fyrir vistfang
+\[ \text{Vistfang} a[i][j] = \text{Upphafsvistfang} + ( i \times \text{fjöldi dalka} + j) \times \text{stærð staks}\]
+\begin{itemize}
+    \item \textbf{Upphafsvistfang}: 0
+    \item \textbf{fjöldi dalka}: 10
+    \item \textbf{stærð staks}: 2 (short int) = 2 bæti
+\end{itemize}
+
+\textbf{Reiknum}:
+\[ \text{Vistfang} a[3][4] = 0 + (3 \times 10 + 4) \times 2 = 0 + 34 \times 2 = 68\]
+
+\textbf{Vistfang staksins a[3][4] er því 68}
+
 
 
 
