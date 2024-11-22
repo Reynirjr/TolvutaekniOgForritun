@@ -110,6 +110,26 @@
     \item[$\square$] Minnisúthlutun
 \end{itemize}
 
+\section {Hlutir til að setja á minnið}
+\begin{itemize}
+    \item \textbf{mov}: mov (move) flytur gildi á milli minnisstaða, t.d. \textbf{movl \%eax, \%ebx} flytur gildið í \textbf{\%eax} yfir í \textbf{\%ebx}
+    \item \textbf{lea}: lea (load effective address) er notað til að reikna út minnisstaða og setja hana í register, t.d. \textbf{leaq (\%rbx, \%rcx, 4), \%rax} 
+    reiknar út \textbf{rbx + (rcx * 4)} og setur í \textbf{\%rax}
+    \item q: q stendur fyrir quadword sem er 64 bita gildi
+    \item l: l stendur fyrir long sem er 32 bita gildi
+    \item w: w stendur fyrir word sem er 16 bita gildi
+    \item b: b stendur fyrir byte sem er 8 bita gildi
+    \item \%rax: 64 bita register
+    \item \%eax: 32 bita register
+    \item \%ax: 16 bita register
+    \item \%al: 8 bita register
+    \item \textbf{Diane's Silk Dress Costs 89} (rdi, rsi, rdx, rcx, r8, r9)
+\end{itemize}
+
+
+
+
+
 
 \newpage
 
@@ -486,6 +506,68 @@ hvaða tilvikum \textbf{O3}-kóðinn gæti verið hraðvirkari.
         ret
 
 \end{verbatim}
+
+\textbf{Svar}:
+Byrjum á að skoða munin á milli þessara kóða :
+
+við sjáum að í seinni kóðanum höfum við 
+strax compare skipun í annari línu sem segir jge (jump greater or equal) sem þýðir að ef \textbf{rsi} er stærra eða jafnt og \textbf{rdx} þá er haldið áfram í \textbf{.L1} sem fer beint í return
+þannig ef rsi er minna er rdx þá er farið í \textbf{.L3}
+
+Næst fáum við leaq skipunina sem margfaldar rax með 3 og bætir í rax síðan er bætt rax við rax svo í raun er verið að gera
+$6 \times rax$ síðan er 1 bætt við rsi og kannað hvort rsi sé orðið jafnt og rdx og ef ekki er farið aftur í \textbf{.L3} sem myndar lykkju.
+
+ástæðan af hverju þetta er hraðvirkara er að það í seinna er færri hopp á milli. 
+
+
+
+\newpage
+
+\subsection{4}
+Hér fyrir neðan er smalamálskóði fyrir endurkvæmt fall með hausinn:
+\textbf{int rec(int n, int m)}:
+
+\begin{verbatim}
+    rec:
+        cmpl    %esi, %edi  # lína 1
+        jge     .L8         # lína 2
+        movl    $0, %eax    # lína 3
+        ret                 # lína 4
+    .L8:
+        subq    $8, %rsp    # lína 5
+        addl    %esi, %esi  # lína 6
+        subl    $2, %edi    # lína 7
+        call    rec         # lína 8
+        addl    $1, %eax    # lína 9
+        addq    $8, %rsp    # lína 10
+        ret                 # lína 11
+
+\end{verbatim}
+
+\subsubsection{a.} Sýnið jafngilt endurkvæmt C fall. Rökstyðjið einstakar skipanir út frá línum í
+smalamálskóðanum.
+
+\textbf{Svar}:
+
+Byrjum á að skoða kóðann: 
+
+\begin{itemize}
+    \item lína 1 og 2: ef edi er stærra eða jafnt og esi þá er hoppað í \textbf{.L8}
+    \item 3 og 4: ef edi er minna en esi þá er eax núllstillt og return skipun framkvæmd.
+    \item lína 5: rsp er minnkað um 8
+    \item lína 6: esi er tvöfaldast
+    \item lína 7: edi er minnkað um 
+    \item lína 8: kallað er á fallið rec
+    \item lína 9: eax er hækkað um 1
+    \item lína 10: rsp er hækkað um 8
+    \item lína 11: return skipun
+\end{itemize}
+
+alright reynum að átta okkur á breytunum
+
+\begin{itemize}
+    \item something
+\end{itemize}
 
 
 
