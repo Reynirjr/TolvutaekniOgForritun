@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1732384356.00891 "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" "TogFLokaprof.pdf" "TogFLokaprof" 1732384360.73583 0
-  "TogFLokaprof.aux" 1732384360 5400 b5c23ef82ed6d29c3e84e1583fc21c12 "pdflatex"
-  "TogFLokaprof.out" 1732384360 5097 6e888493d1389a80ee76375af2fa7224 "pdflatex"
-  "TogFLokaprof.tex" 1732384354 30599 4b8b6f0fb4367199419a934ad397f71b ""
-  "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" 1732384354 30599 4b8b6f0fb4367199419a934ad397f71b ""
+["pdflatex"] 1732387159.56496 "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" "TogFLokaprof.pdf" "TogFLokaprof" 1732387168.77934 0
+  "TogFLokaprof.aux" 1732387167 5582 4b5e826d71764f6c68e5554cac6a18b2 "pdflatex"
+  "TogFLokaprof.out" 1732387167 5231 aeab36d0c6bdb352789bf63381974f81 "pdflatex"
+  "TogFLokaprof.tex" 1732387147 32277 048836ed3267cd80bc67a0078f754814 ""
+  "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" 1732387147 32277 048836ed3267cd80bc67a0078f754814 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1731962365 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1731960895 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731963639 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -35,6 +35,7 @@
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1731958534 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1731958534 31764 459c573c03a4949a528c2cc7f557e217 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb" 1731960896 169201 651a6333c3213b38091f54d2ab2d2cd6 ""
+  "c:/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb" 1732019655 9356 3e1f7eacbb57d05d0b682da8d83eb600 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb" 1732021265 52406 dad2f72863a03727d5f536c64a69c452 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb" 1732021265 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
   "c:/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb" 1732021265 50022 90249cba7e3e4e9845f80328d6f9bd13 ""

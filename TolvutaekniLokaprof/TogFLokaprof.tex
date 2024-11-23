@@ -841,7 +841,35 @@ brotbita.
                                       til að reikna brothluta gerum við $1.(2^{1/2}+2^{1/4}) = 1.75$
                                       Setjum þetta nú saman \[ + 1.75 \times 2^1 = 3.5\]                                
 \end{itemize}
-                                      
+
+\subsubsection{b.}Þið megið breyta einum bita í orðinu að ofan og viljið fá sem hæst gildi (þ.e.
+sem næst $+\infty$). Sýnið og rökstyðjið í hverju tilviki hvaða bita þið mynduð
+breyta til að hámarka gildið. Það geta verið ólíkir bitar í hverri túlkun
+
+\textbf{svar}: 
+\begin{itemize}
+    \item[a.] í unsigned þá myndum við bæta 1 fremst þar sem hægt veri svo $(1)10011 = 1+2+16+32=51 $ 
+    \item[b.] í signed þá má fremsti ekki vera 1 þar sem þá er talan í mínus svo $01(1)011 = 1+2+8+16 = 27$
+    \item[c.] hér myndum við vilja bæta á veldisvísinn svo þá væri talan $0 110 11$ 
+                Reiknum skekkjuna $\text{bias} = 2^{3-1} -1 = 2^2 -1 = 4-1 = 3$
+                Reiknum Raunverulegann veldisvísi $e - \text{bias} =  6 - 3 = 3$
+                Svo talan yrði $1.75 \times 2^3 = 1.75 \times 8 = 14$ 
+\end{itemize}
+
+\subsubsection{c.} Hvaða einum bita ætti að breyta til að lágmarka gildið (þ.e. komast sem næst
+$-\infty$) í hverri túlkun? Rökstyðjið hvert tilvik
+
+\textbf{svar}: 
+\begin{itemize}
+    \item[a.] í unsigned þá myndum við taka 0 fremst þar sem hægt veri svo $000011 = 1+2 = 3 $ 
+    \item[b.] í signed þá setjum við fremsta sem 1 þar sem þá er talan í mínus svo $(1)10011 = -32 + 16+2+1  = -13$
+    \item[c.] hér myndum við vilja setja formerkisbitann sem 1 til að fá töluna í mínus svo  þá væri talan $1 100 11$ 
+                Reiknum skekkjuna $\text{bias} = 2^{3-1} -1 = 2^2 -1 = 4-1 = 3$
+                Reiknum Raunverulegann veldisvísi $e - \text{bias} =  4 - 3 = 1$
+                Svo talan yrði $-1.75 \times 2^1 = -1.75 \times 2 = -3.5$ 
+\end{itemize}
+
+
 
 \newpage
 \section{Vika 1}
