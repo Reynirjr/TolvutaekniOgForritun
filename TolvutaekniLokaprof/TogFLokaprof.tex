@@ -640,7 +640,80 @@ notum víst þessa formúlu fyrir vistfang
 Rissið upp mynd af henni út frá uppröðunarkröfu (\textit{alignment requirements}) x86-
 64. Hversu mörg bæti tekur færslan?
 
+\textbf{Svar}:
 
+Skoðum fyrst hvað hvert stak tekur af minni
+
+\begin{itemize}
+    \item Short int a[2]: 2 bæti
+    \item Double b: 8 bæti
+    \item Char c: 1 bæti
+    \item Char *d: 8 bæti
+\end{itemize}
+
+\begin{center}
+    \begin{tabularx}{\textwidth}{|l|l|X|}
+        \hline
+        \textbf{Offset} & \textbf{Biti} & \textbf{lýsing} \\ \hline
+        0 & a[0] (2bæti) & fyrsta stak í a \\ \hline
+        2 & a[1] (2bæti) & næsta stak í a \\ \hline
+        4-7 & Padding (4 bæti) & Fylling til að halda réttri röð? \\ \hline
+        8-15 & b (8 bæti) & double b \\ \hline
+        16 & c (1 bæti) & char c \\ \hline
+        17-23 & Padding (7 bæti) & Fylling til að halda réttri röð? \\ \hline
+        24-31 & d (8 bæti) & char *d \\ \hline
+    \end{tabularx}
+\end{center}
+
+\textbf{Færslan tekur því 32 bæti}
+
+\subsection{c.} Skyndiminni er 2-vítt (\textit{2-way set associative}) með heildarstærðina 2048 (=211)
+bæti og 16 (=24) bæta línur (þ.e. blokkir).
+
+\textit{i.} Hvað hefur skyndiminnið mörg
+mengi? 
+
+\textbf{Svar}:
+Til að finna Mengin skulum við nota formúluna
+
+\[ \text{Fjöldi Mengi} = \frac{\text{Fjöldi lína}}{\text{Samstillingarstuðull}} \]
+
+Til að finna heildarfjölda lína í skyndiminni er notað formúluna:
+
+\[ \text{Fjöldi lína} = \frac{\text{Heildarstærð}}{\text{Línustærð}} = \frac{2048 \text{bæti}}{16 \text{bæti}} = 128 \text{línur}  \]
+
+\textbf{Fjöldi mengja} er þá (samstillingarstuðulinn er 2 af því þetta er 2-vítt skyndiminni):
+
+\[ \frac{128 \text{línur}}{2} = 64 \text{mengi} \]
+
+\textit{ii.} Ef vistföng eru 16 bitar, hversu margir bitar eru þá notaðir fyrir
+merkið (\textit{tag})?
+
+\textbf{Svar}:
+
+Til að finna fjölda merkisbita þurfum við að :
+
+\begin{enumerate}
+    \item finna fjölda bita fyrir block Offset
+    \item finna fjölda bita fyrir set index
+    \item Draga þessa bita frá heildarfjölda ita í vistfangi til að fá fjölda merkisbita.
+\end{enumerate}
+
+\textbf{Finnum fjölda bita fyrir block Offset}:
+
+\[\textbf{Block offset} = \log_2(\text{Línustærð}) = \log_2(16) = 4 \text{bitar}\]
+
+\textbf{Finnum fjölda bita fyrir set index}:
+
+fjöldi mengja er 64 þannig að:
+
+\[\textbf{Set index} = \log_2(\text{Fjöldi mengja}) = \log_2(64) = 6 \text{bitar}\]
+
+\textbf{Fjöldi merkisbita}:
+
+\[\textbf{Fjöldi merkisbita} = 16 - 4 - 6 = 6 \text{bitar}\]
+
+\textbf{Merkisbitar eru því 6 bitar}
 
 
 
