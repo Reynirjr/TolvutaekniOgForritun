@@ -868,8 +868,122 @@ $-\infty$) í hverri túlkun? Rökstyðjið hvert tilvik
                 Reiknum Raunverulegann veldisvísi $e - \text{bias} =  4 - 3 = 1$
                 Svo talan yrði $-1.75 \times 2^1 = -1.75 \times 2 = -3.5$ 
 \end{itemize}
+\newpage 
+
+\subsection{2}Hér fyrir neðan er x86-64 smalamálsútgáfa af endurkvæma fallinu func.
+
+\begin{center}
+    \begin{verbatim}
+        func:
+            cmpl    $1, %edi
+            jle     .L3
+            pushq   %rbx
+            leal    (%rdi,%rdi,2), %ebx
+            leal    3(%rdi), %edx
+            testl   %edi, %edi
+            cmovns  %edi, %edx
+            sarl    $2, %edx
+            movl    %edx, %edi
+            call    func   
+            addl    %ebx, %eax
+            popq    %rbx
+            ret 
+        .L3:
+            movl    $1, %eax
+            ret
+    \end{verbatim}
+\end{center}
+
+\subsubsection{a.}Skrifið jafngilda C útgáfu af þessu falli. Til að hjálpa ykkur við það er hér fyrir
+neðan beinagrind af fallinu sem þið getið fyllt inn í. Rökstyðjið sérstaklega
+hvaða smalamálsskipanir standa á bakvið þann kóða sem þið setjið inn.
+
+\begin{verbatim}
+    int func(int n) {
+        if ( _____ )
+            return _____;
+       return _____ + func( _____ );
+    }
+\end{verbatim}
+
+\textbf{svar}: 
+Alright skoðum hvað línurnar gera
+\begin{itemize}
+    \item Lína 1: berum edi við 1
+    \item Lína 2: ef edi er 1 eða minna þá er hoppað í \textbf{.L3}
+    \item Lína 3: ýtt rbx á hlaðann
+    \item Lína 4: rdi sinnum 3 sett í ebx
+    \item Lína 5: 3 + rdi sett í edx
+    \item Lína 6: skoðar hvort edi sé neikvætt eða ekki
+    \item Lína 7: ef edi er ekki neikvætt þá er edx = n annars er edx = n+3
+    \item Lína 8: shift arithmetically right eða $ edi >> 2 $ sem deilir með 4
+    \item Lína 9: setur edi í edx
+    \item Lína 10: callað á func
+    \item Lína 11: ebx bætt við eax þar sem ebx er 3 * n þannig $eax = eax + ebx$
+    \item Lína 12: rbx poppað af hlaðanum endurheimt gildi úr kösinni
+    \item Lína 13: return skipun
+    \item Lína 14: sett eax sem 1
+    \item lína 15: return skipun
+\end{itemize}
+
+Reynum nú að setja þetta í c fall:
+
+\begin{lstlisting}
+int func(int n){
+    if(n >=1)
+        return 1;
+    return (3*n) + func((n >= 0 ? n : n+3) / 4);
+}
+\end{lstlisting}
+
+\subsubsection{b.}Teiknið upp hlaðaramma (\textit{stack frame}) fyrir fallið. Sýnið stöðuna þegar þrjú
+endurkvæm köll hafa orðið. Tilgreinið einstaka hluta hvers hlaðaramma.
+
+\begin{center}
+    
+\end{center}
+
+\newpage
+\subsection{3}
+Hér fyrir neðan er C fall sem afritar eitt stak á milli tveggja tvívíðra fylkja. Fylkin
+eru víðvær og er fylkið a af stærðinni \textbf{MxN}, en \textbf{b} er af stærðinni \textbf{NxM}. Þið viti ekki
+gildin á \textbf{M} eða \textbf{N}, en eigið að geta fundið þau útfrá smalamálskóðanum fyrir fallið sem
+einnig er gefinn.
+
+\begin{verbatim}
+    long int a[M][N];
+    long int b[N][M];
+
+    void afrit( int i, int j ) {
+        a[i][j] = b[j][i];  
+    }
+\end{verbatim}
+\begin{verbatim}
+    afrit:
+        movslq      %edi, %rdi
+        movslq      %esi, %rsi
+        leaq        0(,%rsi,8), %rax
+        subq        %rsi, %rax
+        addq        %rdi, %rax
+        movq        b(,%rax,8), %rdx
+        leaq        (%rdi,%rdi,4), %rax
+        leaq        (%rdi,%rax,2), %rax
+        addq        %rax, %rsi
+        movq        %rdx, a(,%rsi,8)
+        ret
+\end{verbatim}
+
+\subsubsection{a.}Hver eru gildin á \textbf{M} og \textbf{N}? Rökstyðjið svörin út frá skipununum í
+smalamálskóðanum.
 
 
+\textbf{svar}: ef við fylgjum diane's silk dress cost 89 þá sjáum við að 
+edi er þar að leiðandi i og esi er þá j. 
+
+skoðum nú línurnar
+\begin{itemize}
+    \item Lína 1:
+\end{itemize}
 
 \newpage
 \section{Vika 1}
