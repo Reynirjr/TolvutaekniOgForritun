@@ -1068,6 +1068,74 @@ Rökstyðjið.
 \subsubsection{e.}Er hægt að segja eitthvað um uppsetningu skyndiminnanna (þ.e. línustærð, vídd,
 eða fjölda mengja) í tölvunum tveimur út frá þessum súluritum? Rökstyðjið.
 
+
+\subsection{5}
+Hér fyrir neðan eru tvær C forritaskrár sem innihalda víðværar breytur.
+
+\begin{verbatim}
+    #include <stdio.h>
+    void fall();
+    static int a = 1;
+    int b = 2;
+    int c;
+    int d;
+    int main() {
+        int c = 3;
+        fall();
+        printf("a:%d, b:%d\n", a, b);
+        printf("c:%d, d:%d\n", c, d);
+        return 0;
+    }
+\end{verbatim}
+
+\begin{verbatim}
+    int a, b;
+    int c = 4;
+    int d = 5;
+    void fall() {
+        static int d;
+        a = 6;
+        b = 7;
+        c = 8;
+        d = 9;
+    }
+    
+\end{verbatim}
+
+
+\subsubsection{a.}Farið í gegnum báðar skrárnar og fyrir hverja skilgreinda breytu gefið upp hvers
+konar breytu er um að ræða og hvar breytan sé vistuð í minnisrými ferlisins (þ.e.
+hlaði, kös, .data-svæði, ...).
+
+\subsubsection{b.}Farið í gegnum báðar skrárnar og fyrir hvert víðvært tákn í skránni segið hvort
+það sé sterkt eða veikt tákn
+
+\subsubsection{c.}Hvert er úttak forritsins þegar það er keyrt? Rökstyðjið hvert gildi fyrir sig.
+
+
+\newpage
+
+\subsection{6}Tölva nokkur hefur 16 bita sýndarvistföng og 10 bita raunvistföng. Síðustærðin er
+16 bæti. Tölvan hefur 2-vítt TLB með samtals 8 sætum.
+
+\subsubsection{a.}Rissið upp skiptingu sýndar- og raunvistfanga í VPN, VPO, PPN, PPO, TLBT,
+TLBI
+
+\subsubsection{b.}eiknið upp TLB sem inniheldur gildi fyrir sýndarvistfangið 0x26E7. Setjið
+rétt merki (tag) í löglegt sæti og búið til eitthvert gildi af réttri stærð fyrir PPN-
+gildið. Það þarf ekkert að vera í hinum sætunum.
+
+\subsubsection{c.}Hvers konar sýndarvistföng varpast í mengi númer 1 í þessu TLB. Hve mörg
+eru þau? Rökstyðjið.
+
+\subsubsection{d.} Útskýrið hvort það gæti gerst að sama sýndarvistfangið, t.d. vistfangið í b-lið að
+ofan, varpist í tvö ólík raunvistföng í sömu keyrslu forrits. Rökstyðjið svar
+ykkar í nokkrum orðum.
+
+
+
+
+
 \section{Vika 1}
 \large{\textbf{Kynning, Linux, C}}
 
