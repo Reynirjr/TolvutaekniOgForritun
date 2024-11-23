@@ -982,9 +982,37 @@ edi er þar að leiðandi i og esi er þá j.
 
 skoðum nú línurnar
 \begin{itemize}
-    \item Lína 1:
+    \item Lína 1: setur 32 bita innihald edi í 64 bita innihald rdi þannig rdi fær i
+    \item Lína 2: setur 32 bita innihald esi í 64 bita rsi þannig rsi fær j
+    \item Lína 3: rsi * 8 sett í rax þannig rax er jafnt og 8 * j
+    \item Lina 4: rax - rsi þannig rax = 7 * j
+    \item Lína 5: rax + rdi þannig rax = 7 * j + i
+    \item Lína 6: b + 8 * rax sett í rdx
+    \item Lína 7: rdi * 5 sett í rax
+    \item Lína 8: rax * 2 + rdi sett í rax ( þannig 11 * rdi sett í rax)
+    \item Lína 9: rsi = rsi + rax
+    \item Lína 10: rdx sett í a+ 8 * rsi 
+    \item Lina 11: return
 \end{itemize}
 
+\textbf{út frá þessu notum við jöfnuna}:
+\[\textbf{Visfang} = b + ( j \times M + i) \times 8\]
+
+út frá smalamálinu Er
+
+\[\text{Offset fyrir a[i][j]} = j + 11i\]
+
+jafnsetjum: 
+\[ i \times N + j = j + 11 i\]
+
+Einangrum N
+\[ i \times N = 11i \rightarrow N = 11 \]
+
+
+
+\subsubsection{b.}:Ef bæði fylkin hefðu verið skilgreind með stærðina \textbf{MxN} hefði þá verið hægt að
+finna gildið á bæði \textbf{M} og \textbf{N} (eða annað hvort þeirra) út frá smalamálskóðanum?
+Rökstyðjið svar ykkar.
 
 \section{Vika 1}
 \large{\textbf{Kynning, Linux, C}}
