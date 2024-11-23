@@ -813,39 +813,39 @@ Rökstyðjið svarið!
 
 Allir ferlarnir munu framkvæma skipunina exit(0) þar sem það er kallað á hana í main fallinu og því munu allir ferlarnir loka.
 
+\newpage
 
+\section{Próf 2021 - Og mín Heiðarleg tilraun á að leysa það}
+
+\subsection{1.} Í þessu dæmi höfum við 6-bita orðið \textbf{010011}. Það er hægt að túlka það á þrjá vegu
+sem gildi: \textit{i}. 6-bita heiltala án formerkis (unsigned), \textit{ii}. 6-bita tvíandhverfu heiltala
+(signed) og \textit{iii}. 6-bita fleytitala (floating point) með 1 formerkisbita, 3 veldisbita og 2
+brotbita.
+
+\subsubsection{a.}Túlkið orðið 010011 sem gildi á þessa þrjá vegu. Sýnið útreikning (sérstaklega
+í fleytitölunni).
+
+\textbf{Svar}:
+
+\begin{itemize}
+    \item \textbf{6-bita heiltala án formerkis}: reiknum þá $2^0+2^1+2^4 = 19 $ 
+    \item \textbf{6-bita tvíandhverfu heiltala}: Reiknum þá sem signed Þar sem það er 0 fremst þá er þetta jákvæð tala og skilar sama svari 
+                                                 og án formerkis þannig $2^0+2^1+2^4 = 19$ 
+    \item \textbf{6-bita fleytitala}: sem 6 bita fleyti tala með 1 formerkisbita og 3 veldisbita og 2 brotbita þá höfum við 0 fyrir jákvæða tölu
+                                      100 sem veldisbita og 11 sem brotbita. við þurfum fyrst að reikna raunverulegan veldisvisi (\textbf{E})
+                                      fyrir það þurfum við fyrst að reikna skekkjustuðulinn sem er reiknaður :
+                                      \[\text{Bias} = 2^{k-1}-1= 2^{3\text{(bitar)}-1}-1 = 2^2-1 = 4 - 1= 3\]
+                                      Reiknum nú \[E = \text{bitagildið þ.e.a.s 100 = 4} - \text{Bias} = 4-1 \]
+                                      Svo raunverulegi veldisvísirinn er 1 semsagt $2^1$
+                                      nú finnum við brothlutann $11$ við vitum að það er gefinn 1 á undan brothluta svo við fáum $1.11$ 
+                                      til að reikna brothluta gerum við $1.(2^{1/2}+2^{1/4}) = 1.75$
+                                      Setjum þetta nú saman \[ + 1.75 \times 2^1 = 3.5\]                                
+\end{itemize}
+                                      
 
 \newpage
 \section{Vika 1}
 \large{\textbf{Kynning, Linux, C}}
-
-\subsection{Heimadæmi spurningar}
-
-\subsubsection{1 og 2}
-kennslu aðferðir
-
-\subsubsection{3}
-Skoðið sýnidæmin á glæru 16 í fyrirlestri 1 (þ.e. $50000 * 50000$ fyrir int og $1e20 +
-(-1e20 + 3.14)$ fyrir float).
-\begin{itemize}
-    \item[a]. Skrifið stutt forrit í Java sem prentar út niðurstöðuna úr þessum útreikningunum
-(athugið að í Java eru kommutölufastar sjálfkrafa af taginu double. Til að fá
-float-fasta þarf að setja f á eftir fastanum, t.d. 3.14f).
-\item[b] . Reyndar er gildið 1e20 (þ.e. 1020) óþarflega stórt. Það eru til mun minni gildi
-sem valda sömu vandræðum. Finnið lægsta gildi a á 10a sem gefur sömu
-niðurstöðu og 1e20 í seinni formúlunni á glæru 16. Sýnið útprentun á því í Java
-forriti.
-\end{itemize}
-
-\subsubsection{4}
-Á glærum 20 og 21 í fyrirlestri 1 er sýnd minnisvilla sem getur komið upp í C forriti.
-Útskýrið hvers vegna svona villa myndi ekki koma upp í sambærilegu Java forriti.
-Hvaða kostir og gallar eru við það að leyfa möguleika á svona villum í C forritum?
-
-\subsubsection{5}
-Setjið upp linux
-
-
 
 \newpage
 \section{Vika 2}
