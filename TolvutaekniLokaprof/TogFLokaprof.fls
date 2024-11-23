@@ -360,10 +360,10 @@ INPUT ./TogFLokaprof.out
 INPUT ./TogFLokaprof.out
 INPUT TogFLokaprof.out
 INPUT TogFLokaprof.out
+OUTPUT TogFLokaprof.pdf
 INPUT ./TogFLokaprof.out
 INPUT ./TogFLokaprof.out
 OUTPUT TogFLokaprof.out
-OUTPUT TogFLokaprof.pdf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr9e.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr9e.tfm
 INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pplx.fd
