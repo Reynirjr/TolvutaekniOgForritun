@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1732399077.60407 "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" "TogFLokaprof.pdf" "TogFLokaprof" 1732399086.35797 0
-  "TogFLokaprof.aux" 1732399085 6120 0d4c57569dee83a5f83ee9172499dc7c "pdflatex"
-  "TogFLokaprof.out" 1732399085 5623 51d02c5367e55150089ac5d0986eb60f "pdflatex"
-  "TogFLokaprof.tex" 1732399065 36982 2952e5d4a5136ba3351803fae4a59ff6 ""
-  "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" 1732399065 36982 2952e5d4a5136ba3351803fae4a59ff6 ""
+["pdflatex"] 1732400499.77558 "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" "TogFLokaprof.pdf" "TogFLokaprof" 1732400509.00771 0
+  "TogFLokaprof.aux" 1732400507 6662 de8e469995c1e2287e63902025b5e306 "pdflatex"
+  "TogFLokaprof.out" 1732400507 6020 3a9db6b7894c0bc9f9bf13ea447f85bc "pdflatex"
+  "TogFLokaprof.tex" 1732400487 38993 3aecd58cd67d383e6492b151fa4b0127 ""
+  "c:/Users/benja/OneDrive/Desktop/Tölvutækni og forritun/TolvutaekniLokaprof/TogFLokaprof.tex" 1732400487 38993 3aecd58cd67d383e6492b151fa4b0127 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1731962365 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1731960895 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731963639 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -237,6 +237,7 @@
   "c:/texlive/2024/texmf.cnf" 1732027718 713 e69b156964470283e0530f5060668171 ""
   "myndir/gistabrot.excalidraw.png" 1731932119 115027 0ddf1fcb38495a7c7a9671692266cae4 ""
   "myndir/minni.excalidraw.png" 1731937707 286585 7fd755bb7c6645f7d0b7136692723a70 ""
+  "myndir/prof2021d4.png" 1732400231 66690 9f1e83133c3ebf91b46105b8e583a905 ""
   "myndir/skipting.excalidraw.png" 1731938341 175523 5235051957ac6e9ba26ff167082eef03 ""
   "myndir/study.png" 1732120177 1530099 0d08dbc5adb505f51e7688cf3cad8b3b ""
   "myndir/syndarminni.excalidraw.png" 1731938129 103791 73d56f2d025adcc0665e926fa535b7e1 ""

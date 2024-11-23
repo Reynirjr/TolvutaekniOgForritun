@@ -987,32 +987,86 @@ skoðum nú línurnar
     \item Lína 3: rsi * 8 sett í rax þannig rax er jafnt og 8 * j
     \item Lina 4: rax - rsi þannig rax = 7 * j
     \item Lína 5: rax + rdi þannig rax = 7 * j + i
-    \item Lína 6: b + 8 * rax sett í rdx
+    \item Lína 6: b + 8 * rax sett í rdx þ.e.a.s (7 * j + i)
     \item Lína 7: rdi * 5 sett í rax
     \item Lína 8: rax * 2 + rdi sett í rax ( þannig 11 * rdi sett í rax)
-    \item Lína 9: rsi = rsi + rax
-    \item Lína 10: rdx sett í a+ 8 * rsi 
+    \item Lína 9: rax = rax + rdi (rsi = j + 11 * i)
+    \item Lína 10: skrifar gildi úr rdx á vistfanginu a + rsi * 8
     \item Lina 11: return
 \end{itemize}
 
-\textbf{út frá þessu notum við jöfnuna}:
+\textbf{út frá þessu notum við}:
+
+
 \[\textbf{Visfang} = b + ( j \times M + i) \times 8\]
 
-út frá smalamálinu Er
+Út frá smalarmálskóðanum fyrir b þá fáum við
+\[ \text{Offset fyrir b[j][i]} = 7j + i\]
 
-\[\text{Offset fyrir a[i][j]} = j + 11i\]
+jafnsetjum:
+\[j \times M + i = 7j + i\]
 
-jafnsetjum: 
-\[ i \times N + j = j + 11 i\]
+Einangrum M
 
-Einangrum N
-\[ i \times N = 11i \rightarrow N = 11 \]
+\[M = 7\]
+
+Gerum nú fyrir a:
+
+\[ \text{Vistfang} = a  + (i \times N \times j) \times 8\]
+
+út frá smalamálinu fáum við
+
+\[ \text{offset fyrir a[i][j]} = 11i +j\]
+
+jafnsetjum:
+
+\[ i \times N \times j = 11i +j\]
+
+einangrum N
+\[ N = 11\]
+
+svo gildin eru 
+
+$M = 7$
+$N = 11$
+
 
 
 
 \subsubsection{b.}:Ef bæði fylkin hefðu verið skilgreind með stærðina \textbf{MxN} hefði þá verið hægt að
 finna gildið á bæði \textbf{M} og \textbf{N} (eða annað hvort þeirra) út frá smalamálskóðanum?
 Rökstyðjið svar ykkar.
+
+\textbf{Svar:} nei ekki hægt en vá hvað ég nenni því ekki að fara út í af hverju
+
+\newpage
+\subsection{4} Hér fyrir neðan eru súlurit fyrir lestrarafköst tveggja ólíkra tölva. Gildin eru
+fengin úr minnisfjalli (\textit{memory mountain}) fyrir tölvurnar. Það er tekinn skurður í
+gegnum minnisfjallið við skrefstærð (\textit{stride}) 8, svipað og gert var í einu heimadæmi í
+námskeiðinu. Í súluritinu er x-ásinn stærð vinnumengisins (\textit{working set}), þ.e. stærð
+fylkjanna sem unnið er með, og y-ásinn sýnir lestrarafköst í MB/sek. Dökku súlurnar
+sýna afköst tölvu A, en ljósu súlurnar sýna afköst tölvu B. Notið súluritin til að svara
+eftirfarandi spurningum:
+
+
+\includegraphics[scale = 0.7]{myndir/prof2021d4.png}
+
+
+\subsubsection{a.}Hversu mörg lög (\textit{levels}) af skyndiminni eru í tölvu A og hversu stórt má áætla
+að hvert þeirra sé? Rökstyðjið svarið!
+
+\subsubsection{b.}Hversu mörg lög (\textit{levels}) af skyndiminni eru í tölvu B og hversu stórt má áætla
+að hvert þeirra sé? Rökstyðjið svarið!
+
+\subsubsection{c.}Tiltekið forrit notar tætitöflu (\textit{hash table}) nokkuð mikið. Taflan hefur 50.000
+stök, sem hvert er 8 bæti að stærð. Hvor tölvan væri hagkvæmari fyrir þetta
+forrit? Rökstyðjið.
+
+\subsubsection{d.}Breytist svar ykkar við c-lið ef tætitaflan stækkar, t.d. tvöfaldast eða þrefaldast?
+Rökstyðjið.
+
+\subsubsection{e.}Er hægt að segja eitthvað um uppsetningu skyndiminnanna (þ.e. línustærð, vídd,
+eða fjölda mengja) í tölvunum tveimur út frá þessum súluritum? Rökstyðjið.
 
 \section{Vika 1}
 \large{\textbf{Kynning, Linux, C}}

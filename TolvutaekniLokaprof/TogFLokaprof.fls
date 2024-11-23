@@ -514,6 +514,11 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplb9e.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplr9e.vf
+INPUT ./myndir/prof2021d4.png
+INPUT ./myndir/prof2021d4.png
+INPUT ./myndir/prof2021d4.png
+INPUT ./myndir/prof2021d4.png
+INPUT ./myndir/prof2021d4.png
 INPUT TogFLokaprof.aux
 INPUT ./TogFLokaprof.out
 INPUT ./TogFLokaprof.out
